@@ -8,6 +8,10 @@ import javafx.scene.control.ScrollPane;
 
 
 public class Main extends Application {
+	
+	//criado um atributo para a cena é possível pegar a referência
+	private static Scene mainScene;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -20,7 +24,7 @@ public class Main extends Application {
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
 			
-			Scene mainScene = new Scene(scrollPane);
+			mainScene = new Scene(scrollPane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
@@ -28,6 +32,11 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+	
+	//método para pegar a referência da cena
+	public static Scene getMainScene() {
+		return mainScene;
+	}//Esse método apenas retorna cena
 	
 	public static void main(String[] args) {
 		launch(args);
