@@ -27,7 +27,7 @@ public class MainViewController implements Initializable {
 	
 	@FXML
 	public void onMenuItemSellerAction() {
-		System.out.println("Seller");
+		System.out.println("Seller on menu");
 	}//fim de onMenuItemSellerAction
 	
 	@FXML
